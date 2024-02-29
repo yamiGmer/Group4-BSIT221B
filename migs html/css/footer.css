@@ -1,0 +1,14 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    
+    padding: 40px;
+    border: solid red 2px;
+    height: 120px;
+
+    background-image: url("res/footer.jpg");
+    
+    font-family: 'Playfair Display';
+    font-style: italic;
+}

@@ -1,0 +1,90 @@
+.img1 {
+    background-image: url("res/udon.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    width: 300px; 
+    height: 200px;
+    font-size: 30px; 
+    border: solid red 2px;
+
+}
+
+.img2 {
+   background-image: url("res/curryramen.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    width: 300px; 
+    height: 200px; 
+    font-size: 30px;
+    border: solid red 2px;
+}
+
+
+.img3 {
+   background-image: url("res/misosoup.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    width: 300px; 
+    height: 200px; 
+    font-size: 30px;
+    border: solid red 2px;
+}
+
+.img4 {
+   background-image: url("res/lumpia.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    width: 300px; 
+    height: 200px; 
+    font-size: 30px;
+    border: solid red 2px;
+}
+
+.img5 {
+   background-image: url("res/tempura.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    width: 300px; 
+    height: 200px; 
+    font-size: 30px;
+    border: solid red 2px;
+}
+
+.img6 {
+   background-image: url("res/omurice.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    width: 300px; 
+    height: 200px; 
+    font-size: 30px;
+    border: solid red 2px;
+}
+
+.img7 {
+   background-image: url("res/sashimi.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    width: 300px; 
+    height: 200px; 
+    font-size: 30px;
+    border: solid red 2px;
+}
+
+.img8 {
+   background-image: url("res/sushirice.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    width: 300px; 
+    height: 200px; 
+    font-size: 30px;
+    border: solid red 2px;
+}
+

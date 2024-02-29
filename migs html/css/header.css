@@ -1,0 +1,7 @@
+header {
+    background-image: url("res/background.jpg");
+    padding: 20px;
+    text-align: center;
+    border: solid red 1px;  
+    z-index: 1000;
+}    
