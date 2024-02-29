@@ -1,3 +1,7 @@
+
+
+
+
 .footer {
     background-color: #333;
     color: #fff;
@@ -7,7 +11,7 @@
     border: solid red 2px;
     height: 120px;
 
-    background-image: url("/recipe-app-group4/public/footer.jpg");
+    background-image: url("/footer.jpg");
     
     font-family: 'Playfair Display';
     font-style: italic;
