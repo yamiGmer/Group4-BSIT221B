@@ -20,17 +20,7 @@ export default function Home({recipe}) {
           <main>
 
           <section>
-              
-              <Link href={{pathname: '/recipeCategory/Main'}}>
-                <h1>Main</h1>
-              </Link>
-              <Link href={{pathname: '/recipeCategory/Noodles'}}>
-                <h1>Noodles</h1>
-              </Link>
-              <Link href={{pathname: '/recipeCategory/Sides'}}>
-                <h1>Sides</h1>
-              </Link>
-                  
+
               <br/>
               <h1>Test map</h1>
                   {
@@ -39,16 +29,20 @@ export default function Home({recipe}) {
               return(
                 //iterate div based on num
                 <div key={i.num}>
-                  <p>{"name:" + i.recipeId}</p>
-                  <p>{"Address" + i.foodName}</p>
-                  
+                  <p>{"Id: " + i.recipeId}</p>
+                  <p>{"Name: " + i.foodName}</p>
+                  <Link href={{pathname: '/recipePage/'+ i.foodName.toString()}}>
+                        RECIPE {i.recipeId}
+                    </Link>  
                   <br></br>
                 </div>
               )
             })
           }
 
-
+            
+          
+         
           </section>
 
 

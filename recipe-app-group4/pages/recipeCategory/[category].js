@@ -7,32 +7,34 @@ import React from 'react'
 
 import fs from 'fs';
 import path from 'path'
+import styles from '@/styles/category.module.css'
 
 
-
-function Recipe ({category}){
+function recipeCategory ({category}){
     const router = useRouter();
     const foodCategory = router.query.category
     console.log(foodCategory)
     return(
-        <>  
+        <>
+            
           <Head>
-            <title>Recipe Page</title>
+            <title>{foodCategory}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
           </Head>
           <Header/>
             <h1>Testing<br/>Food Category: {foodCategory}</h1>  
-
             {
-            category.map(i => {
-              if (foodCategory == i.classification.category){
-              return(
+                category.map(i => {
+                  if (foodCategory == i.classification.category){
+                  return(
+            
                 //iterate div based on num
-                <div key={i.num}>
-                  
-                  <p>{"ID: " + i.recipeId}</p>
-                  <p>{"Food: " + i.foodName}</p>
-                  <p>{"Category: " + i.classification.category}</p>
+                <div key={i.num}>               
+                  <Link href={{pathname: '/recipePage/'+ i.foodName.toString()}}>
+                    <p>{"Food: " + i.foodName}</p>
+                    <img src={`/./././${i.image}`} className={styles.image}/>
+                  </Link>  
+
                   <br></br>
                 </div>
               )
@@ -45,7 +47,7 @@ function Recipe ({category}){
         </>
     );
 
-}export default Recipe
+}export default recipeCategory
 
 export async function getStaticPaths(){
   const filePath = path.join(process.cwd(), "Component/recipe.json");
@@ -68,7 +70,7 @@ export async function getStaticProps({params}) {
     const data = JSON.parse(fileContent);
     
     const category = data.find(recipe => recipe.classification.category == params.category);
-  
+    console.log("category: "+category)
     return{
       props:{
         category: data

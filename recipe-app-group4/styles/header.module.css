@@ -11,23 +11,9 @@
     z-index: 1000;
 }    
 
-
-.h1{
-    color:#fff;
-    font-size: 80px;
-}
-
-/*
-header {
-    background-color: #F8F8F8;
-    padding: 20px;
-    text-align: center;
-    border: solid red 1px;
-    z-index: 1000;
-}
-*/
 .nav {
     display: block;
+    height: 40px;
     bottom: 0; /* Align to the bottom */
     left: 0;
     text-align: center;
@@ -36,10 +22,8 @@ header {
 }
 
 .ul {
-    
     list-style-type: none;
-    margin: 0;
-    
+    margin: 0;   
     /*margin-bottom: 368px;*/
     height: 123px;
     
@@ -52,14 +36,11 @@ header {
 .li {
     display: inline;
     margin-right: 20px;
-    
-}
-
-.a {
-    
-    font-size: 50px;
     text-decoration: none;
     color: #fff;
     
 }
+
+  
+
 
