@@ -22,7 +22,8 @@ export default function Home({recipe}) {
           <section>
 
               <br/>
-              <h1>Test map</h1>
+              <h1>Test map for recipe</h1>
+              <h1>This is the Page for japanese cuisine trivia</h1>
                   {
             //like for i in users(x)
             recipe.map(i => {
