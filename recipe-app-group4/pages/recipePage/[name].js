@@ -3,11 +3,16 @@ import Footer from "@/Component/footer";
 import { useRouter } from "next/router";
 import Head from 'next/head';
 import Link from "next/link";
-import React from 'react'
 
-import fs from 'fs';
-import path from 'path'
-import styles from '@/styles/recipe.module.css'
+import fs from 'fs';;
+import path from 'path';
+import styles from '@/styles/recipe.module.css';
+
+import React from 'react';
+import 'semantic-ui-css/semantic.min.css';
+import { GridRow, GridColumn, Grid, Image } from 'semantic-ui-react';
+
+
 
 
 function recipeName({name}){
@@ -29,16 +34,50 @@ function recipeName({name}){
                     if(recipeName == i.foodName){
                         return(
                             <div key={i.num}>
-                                <img src={`/./././${i.image}`} className={styles.image}/>
-                                <p>{"ID: " + i.recipeId}</p>
-                                <p>{"Food: " + i.foodName}</p>
-                                <p>{"Category: " + i.description}</p>
-                                <br></br>
+                                
+                                
                             </div>
                         )
                     }
                 })
             }
+            {
+            //like for i in users(x)
+            name.map(i => {
+                if(recipeName == i.foodName){
+                    return(
+                        <Grid divided='vertically' key={i.num}>
+                        <GridRow columns={2}>
+                            <GridColumn width={4}>
+                                <img src={`/./././${i.image}`} className={styles.image}/>
+                            </GridColumn>
+                            <GridColumn width={10}>
+                                <p>{"ID: " + i.recipeId}</p>
+                                <p>{"Food: " + i.foodName}</p>
+                                <p>{"Category: " + i.description}</p>
+                                <br></br>
+                            </GridColumn>
+                        </GridRow>
+
+                        <GridRow columns={3}>
+                            <GridColumn>
+                            <img src={`/./././${i.image}`} className={styles.image}/>
+                            </GridColumn>
+                            <GridColumn>
+                            <img src={`/./././${i.image}`} className={styles.image}/>
+                            </GridColumn>
+                            <GridColumn>
+                            <img src={`/./././${i.image}`} className={styles.image}/>
+                            </GridColumn>
+                        </GridRow>
+                        </Grid>
+                    )
+                }
+            }
+            )
+            }
+            
+
             </main>
         </>
     );

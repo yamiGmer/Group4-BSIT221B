@@ -3,7 +3,13 @@ import Footer from "@/Component/footer";
 import Link from "next/link";
 import Head from 'next/head';
 import fs from 'fs';
-import path from 'path'
+import path from 'path';
+
+import React from 'react';
+import 'semantic-ui-css/semantic.min.css'
+import { GridRow, GridColumn, Grid, Image } from 'semantic-ui-react'
+
+
 
 export default function Home({recipe}) {
     return(
@@ -40,12 +46,10 @@ export default function Home({recipe}) {
               )
             })
           }
-
-            
-          
          
           </section>
-
+         
+          
 
           </main>
       
