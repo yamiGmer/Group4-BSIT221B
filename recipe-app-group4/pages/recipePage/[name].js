@@ -29,10 +29,10 @@ function recipeName({name}){
                     if(recipeName == i.foodName){
                         return(
                             <div key={i.num}>
+                                <img src={`/./././${i.image}`} className={styles.image}/>
                                 <p>{"ID: " + i.recipeId}</p>
                                 <p>{"Food: " + i.foodName}</p>
                                 <p>{"Category: " + i.description}</p>
-                                <img src={`/./././${i.image}`} className={styles.image}/>
                                 <br></br>
                             </div>
                         )
