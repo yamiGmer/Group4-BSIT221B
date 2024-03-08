@@ -12,6 +12,7 @@
     text-align: center; /* Centered for the "Taste Of Japan */
     border: solid red 3px;  
     z-index: 1000;
+    font-size: 20px;
     
     
 }    
@@ -21,8 +22,9 @@
     height: 50px;
     bottom: 0; /* Align to the bottom */
     left: 0;
+    padding-bottom: 15px;
     text-align: left;
-    
+    font-size: 25px;
     
     background-color: rgba(0, 0, 0, 0.400) ;
 
