@@ -5,21 +5,28 @@
 }
 .header {
     background-image: url("/background.jpg");
-    padding: 20px;
-    text-align: center;
-    border: solid red 1px;  
+    padding: 20px 0px 0px 0px;
+    color: #fff; /* Color for the "Taste Of Japan */
+    text-align: center; /* Centered for the "Taste Of Japan */
+    border: solid red 3px;  
     z-index: 1000;
+    
+    
 }    
 
 .nav {
-    display: block;
-    height: 40px;
+    /*display: block;*/ /* no need == extra code*/
+    height: 50px;
     bottom: 0; /* Align to the bottom */
     left: 0;
-    text-align: center;
+    text-align: left;
+    
+    
     background-color: rgba(0, 0, 0, 0.400) ;
 
 }
+
+
 
 .ul {
     list-style-type: none;
@@ -28,17 +35,18 @@
     height: 123px;
     
     padding: 0;
-    border: solid red 2px;
+    /*border: solid red 2px;*/ /* extra code 1 */
     
     
 }
 
 .li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-flex;
+    margin: 15px 30px 0px 50px;
     text-decoration: none;
     color: #fff;
     
+
 }
 
   
