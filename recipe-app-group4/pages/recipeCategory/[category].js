@@ -1,4 +1,4 @@
-import Header from "@/Component/header";
+import Header from "@/Component/pagesHeader";
 import Footer from "@/Component/footer";
 import { useRouter } from "next/router";
 import Head from 'next/head';

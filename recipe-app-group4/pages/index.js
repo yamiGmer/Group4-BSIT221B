@@ -1,4 +1,4 @@
-import Header from "@/Component/header";
+import PagesHeader from "@/Component/pagesHeader";
 import Footer from "@/Component/footer";
 import Link from "next/link";
 import Head from 'next/head';
@@ -21,7 +21,7 @@ export default function Home({recipe}) {
           
         </Head>
 
-        <Header/> 
+        <PagesHeader/> 
           
           <main>
 

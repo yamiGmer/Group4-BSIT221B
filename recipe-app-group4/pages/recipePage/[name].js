@@ -1,4 +1,4 @@
-import Header from "@/Component/header";
+import PagesHeader from "@/Component/pagesHeader";
 import Footer from "@/Component/footer";
 import { useRouter } from "next/router";
 import Head from 'next/head';
@@ -10,7 +10,8 @@ import styles from '@/styles/recipe.module.css';
 
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { GridRow, GridColumn, Grid, Image } from 'semantic-ui-react';
+import { GridRow, GridColumn, Grid } from 'semantic-ui-react';
+import { Header, Segment } from 'semantic-ui-react'
 
 
 
@@ -25,49 +26,29 @@ function recipeName({name}){
                 <title>{recipeName}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <Header/>
-            <h1>{recipeName}</h1>
-            <main>
-            {
             
-                name.map(i =>{                 
-                    if(recipeName == i.foodName){
-                        return(
-                            <div key={i.num}>
-                                
-                                
-                            </div>
-                        )
-                    }
-                })
-            }
+            <PagesHeader/>
+            <main>
+
+
             {
-            //like for i in users(x)
             name.map(i => {
                 if(recipeName == i.foodName){
                     return(
-                        <Grid divided='vertically' key={i.num}>
-                        <GridRow columns={2}>
+                        <Grid divided='vertically' key={i.num} centered>
+                        <GridRow columns={2} container centered >
                             <GridColumn width={4}>
+                                <Header as='h3' textAlign='center'>
+                                    {"Food: " + i.foodName}
+                                </Header>
                                 <img src={`/./././${i.image}`} className={styles.image}/>
+                                
                             </GridColumn>
-                            <GridColumn width={10}>
+                            <GridColumn width={11}>
                                 <p>{"ID: " + i.recipeId}</p>
                                 <p>{"Food: " + i.foodName}</p>
                                 <p>{"Category: " + i.description}</p>
                                 <br></br>
-                            </GridColumn>
-                        </GridRow>
-
-                        <GridRow columns={3}>
-                            <GridColumn>
-                            <img src={`/./././${i.image}`} className={styles.image}/>
-                            </GridColumn>
-                            <GridColumn>
-                            <img src={`/./././${i.image}`} className={styles.image}/>
-                            </GridColumn>
-                            <GridColumn>
-                            <img src={`/./././${i.image}`} className={styles.image}/>
                             </GridColumn>
                         </GridRow>
                         </Grid>
@@ -76,6 +57,7 @@ function recipeName({name}){
             }
             )
             }
+            <Footer/>
             
 
             </main>
