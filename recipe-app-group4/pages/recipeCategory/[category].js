@@ -3,79 +3,75 @@ import Footer from "@/Component/footer";
 import { useRouter } from "next/router";
 import Head from 'next/head';
 import Link from "next/link";
-import React from 'react'
-
 import fs from 'fs';
-import path from 'path'
-import styles from '@/styles/category.module.css'
+import path from 'path';
+import styles from '@/styles/category.module.css';
+import { Grid } from 'semantic-ui-react';
 
-
-function recipeCategory ({category}){
+function RecipeCategory ({ category }) {
     const router = useRouter();
-    const foodCategory = router.query.category
-    console.log(foodCategory)
-    return(
-        <>
-            
-          <Head>
-            <title>{foodCategory}</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-          </Head>
-          <Header/>
-            <h1>Testing<br/>Food Category: {foodCategory}</h1>  
-            {
-                category.map(i => {
-                  if (foodCategory == i.classification.category){
-                  return(
-            
-                //iterate div based on num
-                <div key={i.num}>               
-                  <Link href={{pathname: '/recipePage/'+ i.foodName.toString()}}>
-                    <p>{"Food: " + i.foodName}</p>
-                    <img src={`/./././${i.image}`} className={styles.image}/>
-                  </Link>  
+    const foodCategory = router.query.category;
+    console.log(foodCategory);
 
-                  <br></br>
-                </div>
-              )
-            }})
-            }
-            <Link href={{pathname: '../'}}>
-               <h1>Back</h1>
-            </Link>    
-          <Footer/>
+    return (
+        <>
+            <Head>
+                <title>{foodCategory}</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
+            <Header />
+            <h1>Testing<br/>Food Category: {foodCategory}</h1>  
+            <Grid relaxed columns={3}>
+                {category.map(item => {
+                    if (foodCategory === item.classification.category) {
+                        return (
+                            <Grid.Column key={item.num}>
+                                <Link href={{ pathname: '/recipePage/' + item.foodName.toString() }}>
+                                    <>
+                                        <p>{"Food: " + item.foodName}</p>
+                                        <img src={`/${item.image}`} className={styles.image} alt={item.foodName} />
+                                    </>
+                                </Link>
+                            </Grid.Column>
+                        )
+                    }
+                })}
+            </Grid>
+            <Link href={{ pathname: '../' }}>
+                <h1>Back</h1>
+            </Link>
+            <Footer />
         </>
     );
-
-}export default recipeCategory
-
-export async function getStaticPaths(){
-  const filePath = path.join(process.cwd(), "Component/recipe.json");
-  const fileContent = fs.readFileSync(filePath, "utf8");
-  const data = JSON.parse(fileContent);
-
-  const paths = data.map(recipe =>({
-    params: {category: recipe.classification.category}
-  }))
-
-  return{
-    paths,
-    fallback: false
-  };
 }
 
-export async function getStaticProps({params}) {  
+export default RecipeCategory;
+
+export async function getStaticPaths() {
     const filePath = path.join(process.cwd(), "Component/recipe.json");
-    const fileContent = fs.readFileSync(filePath, "utf8")
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const data = JSON.parse(fileContent);
+
+    const paths = data.map(recipe => ({
+        params: { category: recipe.classification.category }
+    }));
+
+    return {
+        paths,
+        fallback: false
+    };
+}
+
+export async function getStaticProps({ params }) {  
+    const filePath = path.join(process.cwd(), "Component/recipe.json");
+    const fileContent = fs.readFileSync(filePath, "utf8");
     const data = JSON.parse(fileContent);
     
-    const category = data.find(recipe => recipe.classification.category == params.category);
-    console.log("category: "+category)
-    return{
-      props:{
-        category: data
-      }
-    }
-  
-  }
+    const category = data.filter(recipe => recipe.classification.category === params.category);
 
+    return {
+        props: {
+            category: category
+        }
+    };
+}
