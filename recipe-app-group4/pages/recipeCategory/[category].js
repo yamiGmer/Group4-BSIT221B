@@ -29,7 +29,7 @@ function RecipeCategory ({ category }) {
                                 <Link href={{ pathname: '/recipePage/' + item.foodName.toString() }}>
                                     <>
                                         <p>{"Food: " + item.foodName}</p>
-                                        <img src={`/${item.image}`} className={styles.image} alt={item.foodName} />
+                                        <img src={`/./././${item.image}`} className={styles.image} alt={item.foodName} />
                                     </>
                                 </Link>
                             </Grid.Column>
