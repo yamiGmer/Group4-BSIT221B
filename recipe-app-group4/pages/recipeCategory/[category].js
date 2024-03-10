@@ -19,7 +19,7 @@ function RecipeCategory({ category }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <Header />
-            <h1>Testing<br />Food Category: {foodCategory}</h1>
+            <h1><br />Food Category: {foodCategory}</h1>
             <Grid relaxed columns={3}>
                 {category.map(item => {
                     if (foodCategory === item.classification.category) {
