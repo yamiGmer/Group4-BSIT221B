@@ -20,6 +20,7 @@ function recipeName({name}){
     const router = useRouter();
     const recipeName = router.query.name;
     console.log("var: " +recipeName);
+    //test commit
     return(
         <>  
             <Head>
