@@ -10,14 +10,15 @@ function PagesHeader(){
     return(
         <Header className={styles.header} textAlign='center'>
             <Grid verticalAlign={'bottom'}>
+                <GridRow/><GridRow/>
                 <GridRow columns={1}>
                     <GridColumn>
                             <Header size='huge' className=''>Taste of Japan</Header>
                     </GridColumn>
                 </GridRow>    
 
-                <GridRow/><GridRow/>          
-                <GridRow columns={4} verticalAlign='bottom'>
+                        
+                <GridRow columns={4}  divided >
                         <GridColumn>
                             <Link href={{pathname: '/'}}>Home</Link>
                         </GridColumn>
