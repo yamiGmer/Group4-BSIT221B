@@ -1,6 +1,10 @@
 .category {
-    margin: 90px 100px -110px 0px; /* Top + Right + Bottom + Left */
+    margin: 90px 100px -120px 0px; /* Top + Right + Bottom + Left */
     padding: 100px 0px 0px 10px;
+    font-size: 30px;
+}
+.back{
+    margin-top: 50px;
     font-size: 30px;
 }
 
