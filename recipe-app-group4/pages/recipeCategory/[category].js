@@ -27,13 +27,13 @@ function RecipeCategory ({ category }) {
                         return (
                             <Grid.Column key={item.num}>
                                 <Link href={{ pathname: '/recipePage/' + item.foodName.toString() }}>
-                                    <div className={styles.category}> {/* Apply category className here */}
+                                    <section className={styles.category}> {/* Apply category className here */}
                                         <p>{"Food: " + item.foodName}</p>
-                                    </div>
+                                    </section>
 
-                                    <div>
+                                    <section>
                                     <img src={`/./././${item.image}`} className={styles.image} alt={item.foodName} />
-                                    </div>
+                                    </section>
 
                                 </Link>
                             </Grid.Column>
@@ -42,7 +42,9 @@ function RecipeCategory ({ category }) {
                 })}
             </Grid>
             <Link href={{ pathname: '../' }}>
+                <section className={styles.category}>
                 <h1>Back</h1>
+                </section>
             </Link>
             <Footer />
         </>

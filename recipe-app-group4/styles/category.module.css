@@ -1,10 +1,11 @@
 .category {
-    margin: 90px 100px -90px 0px; /* Top + Right + Bottom + Left */
-    padding: 0px 0px 0px 10px;
+    margin: 90px 100px -110px 0px; /* Top + Right + Bottom + Left */
+    padding: 100px 0px 0px 10px;
+    font-size: 30px;
 }
 
 .image {
-    margin: 0px 0px 0px 200px;
+    margin: 0px 0px 0px 220px;
     padding: 0px 0px 0px 0px;
     width: 300px;
     height: 200px;
