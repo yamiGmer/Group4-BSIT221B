@@ -3,7 +3,7 @@
         "recipeId" : 1, "foodName" : "CurryRamen",  
         "description" : "Type of Noodle Soup with Japanese curry flavor", 
         "classification" : { "cuisine" :  "Japanese", "category" :  "Noodles" }, 
-        "prepTime" : "5 mins", "cookTime" : "10 mins",  "totalTime" : "15 mins", "serviceSize" : "2 people", 
+        "prepTime" : "5 mins", "cookTime" : "10 mins",  "totalTime" : "15 mins", "servingSize" : "2 people", 
   
         "ingredients" : [  
             "1 litre Chicken Stock",  
@@ -37,7 +37,7 @@
         "recipeId" : 2, "foodName" : "Sushi Rice",  
         "description" : "Sushi is a type of Japanese cuisine that primarily consists of vinegared rice, known as sushi rice or Shari, combined with various ingredients such as raw or cooked seafood, vegetables, and sometimes fruits.", 
         "classification" : { "cuisine" :  "Japanese", "category" :  "Sides" }, 
-        "prepTime" : "30 mins", "cookTime" : "20 mins", "totalTime" : "50 mins", "serviceSize" : "4 people", 
+        "prepTime" : "30 mins", "cookTime" : "20 mins", "totalTime" : "50 mins", "servingSize" : "4 people", 
 
         "ingredients" : [ 
             "2 cups Sushi Rice", 
@@ -63,7 +63,7 @@
 
         "description" : "Sashimi consists of thinly sliced, high-quality raw fish or seafood, served as a delicacy in Japanese cuisine. It's often accompanied by soy sauce (shoyu), wasabi, and pickled ginger (gari). Sashimi showcases the natural flavors and textures of the fresh fish or seafood.", 
         "classification" : {"cuisine" :  "Japanese", "category" :  "Sides"},
-        "prepTime" : "30 mins to 1 hour", "cookTime" : "No cooking time as sashimi is served raw", "totalTime" : "30 mins to 1 hour", "serviceSize" : "3 to 5 slices per person", 
+        "prepTime" : "30 mins to 1 hour", "cookTime" : "No cooking time as sashimi is served raw", "totalTime" : "30 mins to 1 hour", "servingSize" : "3 to 5 slices per person", 
 
         "ingredients" : [ 
             "Sushi-grade fish or seafood (common choices include tuna, salmon, yellowtail, and mackerel)", 
@@ -89,7 +89,7 @@
         "recipeId" : 4, "foodName" : "Tempura",  
         "description" : "Tempura features a light, crispy batter coating various ingredients such as shrimp, fish, vegetables like sweet potato, pumpkin, and bell pepper, and sometimes even mushrooms. It's served hot and typically accompanied by a dipping sauce called tentsuyu.", 
         "classification" : {"cuisine" :  "Japanese", "category" :  "Main"}, 
-        "prepTime" : "15-20 mins", "cookTime" : "2-3 mins per batch", "totalTime" : "23 mins", "serviceSize" : "2-4 people", 
+        "prepTime" : "15-20 mins", "cookTime" : "2-3 mins per batch", "totalTime" : "23 mins", "servingSize" : "2-4 people", 
 
         "ingredients" : [ 
             "1 cup All-Purpose Flour", 
@@ -119,7 +119,7 @@
         "recipeId" : 5, "foodName" : "Miso Soup",  
         "description" : "Miso soup is a traditional Japanese soup made from dashi stock (typically fish stock) and miso paste, along with various ingredients such as tofu, seaweed, and green onions. It's a flavorful and comforting dish often enjoyed as a starter or accompaniment to meals in Japanese cuisine.", 
         "classification" : {"cuisine" :  "Japanese","category" :  "Sides"}, 
-        "prepTime" : "5-10 mins", "cookTime" : "10-15 mins", "totalTime" : "20 mins", "serviceSize" : "4 people", 
+        "prepTime" : "5-10 mins", "cookTime" : "10-15 mins", "totalTime" : "20 mins", "servingSize" : "4 people", 
 
         "ingredients" : [ 
             "4 cups Dashi Stock (you can make your own or use instant dashi granules)", 
@@ -148,7 +148,7 @@
         "recipeId" : 6, "foodName" : "Udon",  
         "description" : "Udon is a type of thick Japanese noodle made from wheat flour, typically served in a savory broth with various toppings. It's a hearty and comforting dish that's popular in Japanese cuisine and can be customized with different ingredients and flavors.", 
         "classification" : { "cuisine" :  "Japanese", "category" :  "Noodles"}, 
-        "prepTime" : "10-15 mins", "cookTime" : "15-20 mins", "totalTime" : "35 mins", "serviceSize" : "4 people", 
+        "prepTime" : "10-15 mins", "cookTime" : "15-20 mins", "totalTime" : "35 mins", "servingSize" : "4 people", 
 
         "ingredients" : [ 
             "4 packs of Udon Noodles (fresh or dried)", 
@@ -178,7 +178,7 @@
         "recipeId" : 7, "foodName" : "Omurice",  
         "description" : "Omurice is a popular modern Japanese dish that's a mashup of Western omelettes and Japanese fried rice. It's a favorite amongst kids and therefore a staple of home cooking here, but it can also be served a little fancier at Yōshoku restaurants in Japan.", 
         "classification" : { "cuisine" :  "Japanese", "category" :  "Main" }, 
-        "prepTime" : "5 mins", "cookTime" : "10 mins",  "totalTime" : "15 mins", "serviceSize" : "2 people", 
+        "prepTime" : "5 mins", "cookTime" : "10 mins",  "totalTime" : "15 mins", "servingSize" : "2 people", 
 
         "ingredients" : [ 
             "For Chicken Rice", 

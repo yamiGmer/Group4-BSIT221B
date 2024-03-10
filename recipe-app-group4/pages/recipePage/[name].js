@@ -13,7 +13,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { GridRow, GridColumn, Grid } from 'semantic-ui-react';
 import { Header, Segment } from 'semantic-ui-react'
 
-
+import RecipeComp from "@/Component/recipe";
 
 
 function recipeName({name}){
@@ -36,18 +36,30 @@ function recipeName({name}){
                 if(recipeName == i.foodName){
                     return(
                         <Grid divided='vertically' key={i.num} centered>
+                            <br/>
                         <GridRow columns={2} container centered >
-                            <GridColumn width={4}>
-                                <Header as='h3' textAlign='center'>
-                                    {"Food: " + i.foodName}
+                            <GridColumn width={4} centered textAlign='center'>
+                                <Segment>
+                                <Header as='h1'>
+                                    {i.foodName}
                                 </Header>
+                                </Segment>
+                                <Segment>
                                 <img src={`/./././${i.image}`} className={styles.image}/>
-                                
+                                </Segment>
                             </GridColumn>
                             <GridColumn width={11}>
-                                <p>{"ID: " + i.recipeId}</p>
-                                <p>{"Food: " + i.foodName}</p>
-                                <p>{"Category: " + i.description}</p>
+                                <Segment>
+                                    <Header as='h2'>{i.classification.category + " Dish: " +i.classification.cuisine }</Header>
+                                    <Header as='h2'>{"Preparation Time: " + i.prepTime}</Header>
+                                </Segment>
+                                <Segment>
+                                    <Header as='h4'>{"Preparation Time: " + i.prepTime}</Header>
+                                    <Header as='h4'>{"Cooking Time: " + i.cookTime}</Header>
+                                    <Header as='h4'>{"Total Time: " + i.totalTime}</Header>
+                                    <Header as='h4'>{"Serving Size: " + i.servingSize}</Header>
+                                    <RecipeComp/>
+                                </Segment>
                                 <br></br>
                             </GridColumn>
                         </GridRow>
