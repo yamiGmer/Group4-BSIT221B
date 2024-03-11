@@ -4,9 +4,8 @@ import { Header } from 'semantic-ui-react'
 import { ListItem, ListContent, List} from 'semantic-ui-react'
 import { GridRow, GridColumn, Grid, Segment } from 'semantic-ui-react'
 
-
-
 function PagesHeader(){
+
     return(
         <Header className={styles.header} textAlign='center'>
             <Grid verticalAlign={'bottom'}>
@@ -16,8 +15,7 @@ function PagesHeader(){
                             <Header size='huge' className=''>Taste of Japan</Header>
                     </GridColumn>
                 </GridRow>    
-
-                        
+               
                 <GridRow columns={4}  divided >
                         <GridColumn>
                             <Link href={{pathname: '/'}}>Home</Link>
@@ -32,7 +30,7 @@ function PagesHeader(){
                         <GridColumn>
                             <Link href={{pathname: '/recipeCategory/Noodles'}}>Noodles</Link>
                         </GridColumn>
-                   
+
                 </GridRow>
             </Grid> 
 
@@ -41,3 +39,4 @@ function PagesHeader(){
     )
 }
 export default PagesHeader
+

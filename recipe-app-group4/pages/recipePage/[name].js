@@ -13,13 +13,14 @@ import 'semantic-ui-css/semantic.min.css';
 import { GridRow, GridColumn, Grid } from 'semantic-ui-react';
 import { Header, Segment } from 'semantic-ui-react'
 
-import RecipeComp from "@/Component/recipe";
+import RecipeComp2 from "@/Component/recipe";
 
 
-function recipeName({name}){
+function recipePage({name}){
     const router = useRouter();
     const recipeName = router.query.name;
     console.log("var: " +recipeName);
+    //console.log(nameOfRecipe);
     return(
         <>  
             <Head>
@@ -37,7 +38,7 @@ function recipeName({name}){
                     return(
                         <Grid divided='vertically' key={i.num} centered>
                             <br/>
-                        <GridRow columns={2} container centered >
+                        <GridRow columns={2} container >
                             <GridColumn width={4} centered textAlign='center'>
                                 <Segment>
                                 <Header as='h1'>
@@ -58,7 +59,10 @@ function recipeName({name}){
                                     <Header as='h4'>{"Cooking Time: " + i.cookTime}</Header>
                                     <Header as='h4'>{"Total Time: " + i.totalTime}</Header>
                                     <Header as='h4'>{"Serving Size: " + i.servingSize}</Header>
-                                    <RecipeComp/>
+                                    <RecipeComp2
+                                       nameOfRecipe = {i.foodName}
+                                       
+                                    />
                                 </Segment>
                                 <br></br>
                             </GridColumn>
@@ -75,7 +79,7 @@ function recipeName({name}){
             </main>
         </>
     );
-}export default recipeName;
+}export default recipePage;
 
 
 export async function getStaticPaths(){
