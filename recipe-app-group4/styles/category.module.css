@@ -1,7 +1,9 @@
 .category {
     margin: 90px 100px -120px 0px; /* Top + Right + Bottom + Left */
-    padding: 100px 0px 0px 10px;
+    padding: 10px 0px 10px 10px;
     font-size: 30px;
+    border: solid  1px black;
+    background-color: rgba(0, 0, 0, 0.800);
 }
 .back{
     margin: 50px 0px 0px 10px;
