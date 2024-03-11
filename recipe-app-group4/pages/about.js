@@ -1,6 +1,6 @@
-import Header from "@/Component/header";
-import Footer from "@/Component/footer";
 import Head from 'next/head';
+import PagesHeader from "@/Component/pagesHeader";
+import Footer from "@/Component/footer";
 
 export default function About() {
     return (
@@ -10,7 +10,7 @@ export default function About() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
 
-            <Header/>
+            <PagesHeader/>
 
             <main>
                 <section>

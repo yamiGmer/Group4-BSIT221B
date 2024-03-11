@@ -16,7 +16,7 @@ function PagesHeader(){
                     </GridColumn>
                 </GridRow>    
                
-                <GridRow columns={4}  divided >
+                <GridRow columns={5}  divided >
                         <GridColumn>
                             <Link href={{pathname: '/'}}>Home</Link>
                         </GridColumn>
@@ -29,6 +29,9 @@ function PagesHeader(){
                         </GridColumn>
                         <GridColumn>
                             <Link href={{pathname: '/recipeCategory/Noodles'}}>Noodles</Link>
+                        </GridColumn>
+                        <GridColumn>
+                            <Link href={{pathname: '/about'}}>About</Link>
                         </GridColumn>
 
                 </GridRow>
