@@ -12,7 +12,7 @@ import styles from '@/styles/recipe.module.css';
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { GridRow, GridColumn, Grid } from 'semantic-ui-react';
-import { Header, Segment } from 'semantic-ui-react'
+import { Header, Segment, Image} from 'semantic-ui-react'
 
 import RecipeComp from "@/Component/recipe";
 
@@ -37,43 +37,39 @@ function recipePage({name}){
                     return(
                         <Grid divided='vertically' key={i.num} centered stackable>
                             <br/>
-                        <GridRow columns={2} container >
-                            <GridColumn width={5} centered textAlign='center'>
-                                <Segment>
-                                    <Header as='h1'>
-                                        {i.foodName}
-                                    </Header>
-                                </Segment>
-                                <Segment>
-                                    <img src={`/./././${i.image}`} className={styles.image}/>
-                                </Segment>
-                            </GridColumn>
-                            <GridColumn width={10}>
-                                <Segment>
-                                    <Header as='h2'>{i.classification.category + " Dish: " +i.classification.cuisine }</Header>
-                                   
-                                </Segment>
-                                <Segment>
-                                    <Header as='h4'>{"Preparation Time: " + i.prepTime}</Header>
-                                    <Header as='h4'>{"Cooking Time: " + i.cookTime}</Header>
-                                    <Header as='h4'>{"Total Time: " + i.totalTime}</Header>
-                                    <Header as='h4'>{"Serving Size: " + i.servingSize}</Header>
-                                    
-                                    <RecipeComp
-                                        ingredients={i.ingredients}
-                                        procedures={i.procedures}
-                                       
-                                    />
-                                </Segment>
-                                <br></br>
-                            </GridColumn>
-                        </GridRow>
+                            <GridRow columns={2} container>
+                                <GridColumn width={5} textAlign='center'> 
+                                    <Segment>
+                                        <Header as='h1'>
+                                            {i.foodName}
+                                        </Header>
+                                    </Segment>
+                                    <Segment>
+                                        <Image src={`/./././${i.image}`} size='large' centered/>
+                                    </Segment>
+                                </GridColumn>
+                                <GridColumn width={10}>
+                                    <Segment>
+                                        <Header as='h2'>{i.classification.category + " Dish: " +i.classification.cuisine }</Header>
+                                    </Segment>
+                                    <Segment>
+                                        <Header as='h3'>{"Preparation Time: " + i.prepTime}</Header>
+                                        <Header as='h3'>{"Cooking Time: " + i.cookTime}</Header>
+                                        <Header as='h3'>{"Total Time: " + i.totalTime}</Header>
+                                        <Header as='h3'>{"Serving Size: " + i.servingSize}</Header>
+                                        <RecipeComp
+                                            ingredients={i.ingredients}
+                                            procedures={i.procedures}
+                                        />
+                                    </Segment>
+                                    <br></br>
+                                </GridColumn>
+                            </GridRow>
                         </Grid>
                     )
                 }
             }
-            )
-            }
+            )}
             
             
 
