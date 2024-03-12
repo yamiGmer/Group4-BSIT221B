@@ -4,11 +4,11 @@ import Link from "next/link";
 import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
-
+import styles from '@/styles/home.module.css'
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css'
 import { GridRow, GridColumn, Grid, Image, Header, Segment} from 'semantic-ui-react'
-
+import { CardMeta, CardHeader, CardDescription, CardContent, Card } from 'semantic-ui-react'
 
 export default function Home({recipe}) {
     return(
@@ -26,7 +26,7 @@ export default function Home({recipe}) {
           <Grid>
             <GridRow key='title-row' textAlign="center" columns={1}>
               <GridColumn key='title-column'>
-                <Header as='h1'>Taste of Japan</Header>
+                <Header as='h1'>Search Bar</Header>
               </GridColumn>
             </GridRow>   
             <GridRow columns={2} relaxed stackable textAlign="center">
@@ -35,10 +35,24 @@ export default function Home({recipe}) {
                   <Header as='h2'>Recommended by Web Creators</Header>
                   {
                   recipe.map(i => {
+                    if(i.recipeId == 4 || i.recipeId == 7){
                       return(
-                       <h1>{i.foodName}</h1>
+                        
+                        <Card key={i.num} textAlign='left' className={styles.card}>
+                        <Image src={`/./././${i.image}`} wrapped ui={false} fluid/>
+                        <CardContent>
+                          <CardHeader>{i.foodName}</CardHeader>
+                          <CardMeta>
+                            <span className='foodId'>Food No. {i.recipeId}</span>
+                          </CardMeta>
+                          <CardDescription>
+                            {i.description}
+                          </CardDescription>
+                        </CardContent>
+                      </Card>
+                      
                       )
-                    })
+                    }})
                     }
                   
                 </Segment>
@@ -51,6 +65,7 @@ export default function Home({recipe}) {
 
                   recipe.slice(0).reverse().map(i => {
                     return(
+
                       <div key={i.num}>  
                         <Link href={{pathname: '/recipePage/'+ i.foodName.toString()}}>
                           <p>{i.recipeId + ". " + i.foodName}</p>
