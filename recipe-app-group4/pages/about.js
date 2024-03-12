@@ -43,9 +43,9 @@ export default function About() {
                             margin-right: 3vh;
                         }
                         .image-container img {
-                            max-width: 40vh;
-                            height: 45vh;
-                            border: 0.5vh solid red; 
+                            max-width: auto;
+                            height: auto;
+                            border: 0.3vh solid black; 
                         }
 
                         @media only screen and (max-width: 768px) {
