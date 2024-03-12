@@ -20,25 +20,35 @@ export default function About() {
                         }
                         main {
                             padding: 20px;
-                            max-width: 800px;
+                            max-width: 190h;
                             margin: 0 auto;
                         }
                         section {
-                            margin-bottom: 50px;
+                            margin-bottom: 1vh;
                         }
                         h1 {
-                            font-size: 6vh;
-                            margin-bottom: 40px;
+                            font-size: 3em;
+                            margin-bottom: 3vh;
                             color: black;
-                            text-align: center;
+                            text-align: left;
                         }
                         p {
-                            font-size: 2vh;
+                            font-size: 1.3em;
                             line-height: 2;
                             text-align: justify;
-                            
-                        }
+                        }   
 
+                        .image-container {
+                            float: left;
+                            margin-right: 3vh;
+                           
+                        }
+                        .image-container img {
+                            max-width: 40vh;
+                            height: 57vh;
+                            
+                            border: 3px solid red; 
+                        }
                     `}
                 </style>
             </Head>
@@ -47,10 +57,36 @@ export default function About() {
 
             <main>
                 <section>
-                    <h1>About Japanese Cuisine</h1>
-                    <p> 
-                        Japanese cuisine has a rich history that spans thousands of years, blending indigenous traditions with influences from China, Europe, and beyond. From its humble beginnings in prehistoric hunting and gathering to the sophisticated courtly cuisine of the Nara and Heian periods, Japanese food has evolved alongside the country's cultural and social changes. The medieval era introduced Zen Buddhism, emphasizing simplicity and mindfulness in cooking, while the Edo period saw the rise of sushi, tempura, and other iconic dishes. Modernization and globalization have further shaped Japanese cuisine, with a focus on seasonality, sustainability, and culinary innovation. Today, Japanese food is celebrated worldwide for its exquisite flavors, artful presentation, and deep cultural significance.
-                    </p>
+                    <div class="image-container">
+                        <img src="/japanese_cuisine.jpg" alt="Japanese Cuisine" />
+                    </div>
+                    <div>
+                        <h1>About Japanese Cuisine</h1>
+                        <p> 
+                        From its humble beginnings in prehistoric hunting and gathering to the sophisticated courtly cuisine of the Nara and Heian periods, Japanese food has evolved alongside the country's cultural and social changes.
+
+The medieval era introduced Zen Buddhism, emphasizing simplicity and mindfulness in cooking. This period saw the development of shojin ryori, the vegetarian cuisine of Buddhist monks, which continues to influence Japanese culinary traditions today.
+
+The Edo period (1603-1868) witnessed the rise of sushi, tempura, and other iconic dishes. Sushi, originally a method of preserving fish, transformed into a delicacy enjoyed by all social classes. Tempura, introduced by Portuguese traders, became a popular street food.
+
+Modernization and globalization further shaped Japanese cuisine, with a focus on seasonality, sustainability, and culinary innovation. Western ingredients and cooking techniques were integrated, resulting in dishes like tonkatsu (breaded pork cutlets) and curry rice.
+
+Today, Japanese food is celebrated worldwide for its exquisite flavors, artful presentation, and deep cultural significance. Traditional cooking techniques like grilling (yakimono), steaming (mushimono), simmering (nimono), and frying (agemono) are still revered, alongside a growing interest in health-conscious and plant-based alternatives.
+
+Regional variations abound, with distinct culinary traditions found across the country's islands. Each region offers its own specialties, from the seafood-rich cuisine of Hokkaido to the hearty dishes of the mountainous regions.
+
+The cultural significance of food is deeply ingrained in Japanese society, evident in rituals like the tea ceremony (chanoyu) and the appreciation of seasonal ingredients through festivals like hanami (cherry blossom viewing) and osechi ryori (New Year's cuisine).
+
+In recent years, Japanese cuisine has experienced a global surge in popularity, with sushi bars, ramen shops, and izakayas (casual pubs) found in cities around the world. This has led to a greater appreciation for Japanese ingredients, culinary techniques, and dining aesthetics on the international stage.
+
+
+
+
+
+
+
+                        </p>
+                    </div>
                 </section>
             </main>
 
