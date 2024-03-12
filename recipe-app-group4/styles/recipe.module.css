@@ -2,10 +2,25 @@
     /*display: inline-flex;
     flex-direction: column;
     align-items: center;*/
-    padding: 0px;
-    margin: 0px 0px 0px 5px;   /*  Bottom + Top + Left + Right*/
-    width: 360px; 
-    height: 400px;
-    font-size: 30px; 
+    width: 20em; 
+    height: 25em;
     border: solid red 2px;
+}
+@media screen 
+and (max-device-width: 1035px) {
+    /* For laptop screen: */
+    .image{
+        width: 15em; 
+        height: 25em;
+        border: solid red 2px;
+    }
+}
+@media screen 
+and (max-device-width: 820px) {
+    /* For laptop screen: */
+    .image{
+        width: 13em; 
+        height: 25em;
+        border: solid red 2px;
+    }
 }
