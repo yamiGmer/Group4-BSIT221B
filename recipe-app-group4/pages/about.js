@@ -40,7 +40,7 @@ export default function About() {
 
                         .image-container {
                             float: left;
-                            margin-right: 4vh;
+                            margin-right: 3vh;
                         }
                         .image-container img {
                             max-width: 40vh;
