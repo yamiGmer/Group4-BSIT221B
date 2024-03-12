@@ -12,3 +12,7 @@
     height: 15em;
     border: solid red 2px;
 }
+
+.category_header{
+    height: 10vh;
+}

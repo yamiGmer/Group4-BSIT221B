@@ -78,7 +78,7 @@ export default function About() {
             <main>
                 <section>
                     <div class="image-container">
-                        <img src="/japanese_cuisine.jpg" alt="Japanese Cuisine" />
+                        <img src="/japanese_cuisine.webp" alt="Japanese Cuisine" />
                     </div>
                     <div>
                         <h1>About Japanese Cuisine</h1>

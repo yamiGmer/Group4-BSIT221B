@@ -6,7 +6,8 @@ import Link from "next/link";
 import fs from 'fs';
 import path from 'path';
 import styles from '@/styles/category.module.css';
-import { Grid, GridRow, GridColumn, Segment, Image} from 'semantic-ui-react'
+import { Grid, GridRow, GridColumn, Segment, Image, Header} from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css';
 
 
 
@@ -24,9 +25,12 @@ function RecipeCategory({ category }) {
             </Head>
             <PagesHeader />
             <main>
-
-            <h1><br />Food Category: {foodCategory}</h1>
+           
+          
             <Grid relaxed stackable>
+                <GridRow centered key='category-header' className={styles.category_header}>
+                    <Header as='h1'>{foodCategory}</Header>
+                </GridRow>
                 <GridRow divided centered>
                     {category.map(item => {
                         if (foodCategory === item.classification.category) {
