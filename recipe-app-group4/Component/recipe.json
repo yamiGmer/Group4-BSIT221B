@@ -28,7 +28,7 @@
             "3. In the meantime, to make the spicy pork topping, heat the oil in a wok or frying pan over high heat. Add the pork and stir-fry until almost cooked. Add the doubanjiang paste (you could also use gochujang here instead if you prefer) and stir-fry until well combined. Then add the spinach and soy sauce and stir-fry for another 2 minutes or until the spinach has wilted. Remove from heat and set aside until ready to serve. ", 
             "4. To serve, divide your cooked ramen noodles between serving bowls. Ladle the hot broth over the noodles. Top with the spicy pork and sprinkle over the spring onion. Add some Japanese pickled ginger and serve immediately."  
         ],
-        "image" : "/recipeImages/curryramen.jpg"
+        "image" : "/recipeImages/curryramen.webp"
     
     },
     
@@ -54,7 +54,7 @@
             "4. Gently fold vinegar mixture into cooked rice, then spread it out to cool down, allowing flavors to meld.", 
             "5. Once cooled, the sushi rice is ready to be used as a base for sushi rolls or nigiri." 
         ],
-        "image": "/recipeImages/sushirice.jpg"
+        "image": "/recipeImages/sushirice.webp"
     },
     
 
@@ -80,7 +80,7 @@
             "5. Serve the sashimi immediately after slicing to maintain freshness. Provide soy sauce (shoyu) and wasabi on the side for dipping. Include pickled ginger (gari) as a palate cleanser between bites.", 
             "6. Any leftover sashimi should be promptly refrigerated and consumed within a day to ensure food safety." 
         ],
-        "image": "/recipeImages/sashimi.jpg"
+        "image": "/recipeImages/sashimi.webp"
 
     }, 
 
@@ -110,7 +110,7 @@
             "7. Repeat the process with the remaining ingredients, adjusting the frying time as needed depending on the thickness of the seafood and vegetables.", 
             "8. Serve the tempura hot with tentsuyu dipping sauce on the side." 
         ],
-        "image": "/recipeImages/tempura.jpg"
+        "image": "/recipeImages/tempura.webp"
 
     }, 
 
@@ -140,7 +140,7 @@
             "7. Add the sliced green onions to the soup just before serving, reserving some for garnish if desired.", 
             "8. Ladle the miso soup into bowls and garnish with additional sliced green onions if desired."
         ],
-        "image": "/recipeImages/misosoup.jpg"
+        "image": "/recipeImages/misosoup.webp"
     }, 
 
 
@@ -170,7 +170,7 @@
             "7. Divide the udon noodles and broth among serving bowls, making sure to distribute the toppings evenly.", 
             "8. Garnish the udon noodles with any additional toppings you prepared earlier, such as sliced green onions, tempura flakes, or boiled eggs." 
         ],
-        "image": "/recipeImages/udon.jpg"
+        "image": "/recipeImages/udon.webp"
     },
     
     
@@ -212,7 +212,7 @@
             "12. Position the pan over the plated rice and gently slide the egg out of the pan onto the rice.", 
             "13. Garnish with ketchup and parsley to taste." 
         ],
-        "image": "/recipeImages/omurice.jpg"
+        "image": "/recipeImages/omurice.webp"
 
 } 
 
