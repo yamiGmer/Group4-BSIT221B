@@ -44,7 +44,7 @@ export default function About() {
                         }
                         .image-container img {
                             max-width: 40vh;
-                            height: 55vh;
+                            height: 45vh;
                             border: 0.5vh solid red; 
                         }
 
