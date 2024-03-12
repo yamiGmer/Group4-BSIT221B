@@ -45,7 +45,7 @@ export default function About() {
                         .image-container img {
                             max-width: auto;
                             height: auto;
-                            border: 0.5vh solid red; 
+                            border: 0.3vh solid black; 
                         }
 
                         @media only screen and (max-width: 768px) {
