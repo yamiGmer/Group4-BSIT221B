@@ -6,9 +6,9 @@ import Link from "next/link";
 import fs from 'fs';
 import path from 'path';
 import styles from '@/styles/category.module.css';
-import { Grid, GridRow, GridColumn, Segment} from 'semantic-ui-react'
+import { Grid, GridRow, GridColumn, Segment, Image} from 'semantic-ui-react'
 
-import { Header } from 'semantic-ui-react'
+
 
 
 
@@ -27,25 +27,26 @@ function RecipeCategory({ category }) {
 
             <h1><br />Food Category: {foodCategory}</h1>
             <Grid relaxed stackable>
-
                 <GridRow divided centered>
-                {category.map(item => {
-                    if (foodCategory === item.classification.category) {
-                        console.log(item.num)
-                        return (  
-                                <GridColumn key={item.num} width={3}>  
+                    {category.map(item => {
+                        if (foodCategory === item.classification.category) {
+                            console.log(item.num)
+                            return (  
+                                <GridColumn key={item.num} width={3} textAlign="center" verticalAlign='middle'>
                                     <Segment>             
                                         <Link 
-                                        href={{ pathname: '/recipePage/' + item.foodName.toString() }}
+                                            href={{ pathname: '/recipePage/' + item.foodName.toString() }}
                                         >
-                                            <img src={`/./././${item.image}`} className={styles.image} alt={item.foodName} />
-                                                <p>{item.foodName}</p>                                                          
+                                            <Image src={`/./././${item.image}`} alt={item.foodName} size='small' fluid centered/>                                                        
                                         </Link>
                                     </Segment>
+                                    <Segment>
+                                        <p>{item.foodName}</p>  
+                                    </Segment>
                                 </GridColumn> 
-                        )
-                    }
-                })}
+                            )
+                        }
+                    })}
                 </GridRow>
             </Grid>
 

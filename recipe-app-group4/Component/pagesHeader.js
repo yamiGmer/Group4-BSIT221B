@@ -1,10 +1,7 @@
 import styles from '@/styles/header.module.css';
 import Link from 'next/link';
 import { Header, Grid, GridRow, GridColumn } from 'semantic-ui-react';
-
 import 'semantic-ui-css/semantic.min.css'
-
-import path from 'path';
 import React from 'react';
 
 function PagesHeader({ recipe }) {
