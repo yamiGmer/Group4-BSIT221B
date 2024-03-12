@@ -74,10 +74,11 @@ function recipePage({name}){
             }
             )
             }
-            <Footer/>
+            
             
 
             </main>
+            <Footer/>
         </>
     );
 }export default recipePage;
