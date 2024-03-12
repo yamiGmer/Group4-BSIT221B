@@ -6,7 +6,7 @@ import Link from "next/link";
 import fs from 'fs';
 import path from 'path';
 import styles from '@/styles/category.module.css';
-import { Grid, GridRow, GridColumn} from 'semantic-ui-react';
+import { Grid, GridRow, GridColumn, Segment} from 'semantic-ui-react';
 
 function RecipeCategory({ category }) {
     const router = useRouter();
@@ -20,18 +20,24 @@ function RecipeCategory({ category }) {
             </Head>
             <PagesHeader />
             <main>
+
             <h1><br />Food Category: {foodCategory}</h1>
-            <Grid relaxed>
+            <Grid relaxed stackable>
+
                 <GridRow divided centered>
                 {category.map(item => {
                     if (foodCategory === item.classification.category) {
                         console.log(item.num)
                         return (  
-                                <GridColumn key={item.num} width={3} centered>               
-                                    <Link href={{ pathname: '/recipePage/' + item.foodName.toString() }}>
-                                        <img src={`/./././${item.image}`} className={styles.image} alt={item.foodName} />
-                                            <p>{item.foodName}</p>                                                          
-                                    </Link>
+                                <GridColumn key={item.num} width={3}>  
+                                    <Segment>             
+                                        <Link 
+                                        href={{ pathname: '/recipePage/' + item.foodName.toString() }}
+                                        >
+                                            <img src={`/./././${item.image}`} className={styles.image} alt={item.foodName} />
+                                                <p>{item.foodName}</p>                                                          
+                                        </Link>
+                                    </Segment>
                                 </GridColumn> 
                         )
                     }
