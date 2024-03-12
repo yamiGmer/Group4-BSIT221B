@@ -1,9 +1,9 @@
 .category {
-    margin: 90px 100px -120px 0px; /* Top + Right + Bottom + Left */
+    margin: 15vh 40vh -15vh 10px; /* Top + Right + Bottom + Left */ /* old position (90px 100px -120px 0px;)*/
     padding: 10px 0px 10px 10px;
     font-size: 30px;
     border: solid  1px black;
-    background-color: rgba(0, 0, 0, 0.800);
+    /*background-color: rgba(0, 0, 0, 0.800);*/
 }
 .back{
     margin: 50px 0px 0px 10px;
