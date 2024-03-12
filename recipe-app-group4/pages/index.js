@@ -10,7 +10,6 @@ import 'semantic-ui-css/semantic.min.css'
 import { GridRow, GridColumn, Grid, Image, Header, Segment} from 'semantic-ui-react'
 
 
-
 export default function Home({recipe}) {
     return(
         <>
@@ -34,9 +33,14 @@ export default function Home({recipe}) {
               <GridColumn key='left-column' width={12} textAlign="left">
                 <Segment>
                   <Header as='h2'>Recommended by Web Creators</Header>
-
-
-
+                  {
+                  recipe.map(i => {
+                      return(
+                       <h1>{i.foodName}</h1>
+                      )
+                    })
+                    }
+                  
                 </Segment>
               </GridColumn>
 
