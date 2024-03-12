@@ -43,8 +43,8 @@ export default function About() {
                             margin-right: 3vh;
                         }
                         .image-container img {
-                            max-width: 40vh;
-                            height: 45vh;
+                            max-width: auto;
+                            height: auto;
                             border: 0.5vh solid red; 
                         }
 
