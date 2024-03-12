@@ -6,7 +6,11 @@ import Link from "next/link";
 import fs from 'fs';
 import path from 'path';
 import styles from '@/styles/category.module.css';
-import { Grid, GridRow, GridColumn, Segment} from 'semantic-ui-react';
+import { Grid, GridRow, GridColumn, Segment} from 'semantic-ui-react'
+
+import { Header } from 'semantic-ui-react'
+
+
 
 function RecipeCategory({ category }) {
     const router = useRouter();
@@ -49,9 +53,7 @@ function RecipeCategory({ category }) {
             <Footer />
         </>
     );
-}
-
-export default RecipeCategory;
+}export default RecipeCategory;
 
 export async function getStaticPaths() {
     const filePath = path.join(process.cwd(), "Component/recipe.json");
