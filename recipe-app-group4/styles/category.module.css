@@ -11,10 +11,7 @@
 }
 
 .image {
-    margin: 0px 0px 0px 265px;
-    padding: 0px 0px 0px 0px;
-    width: 300px;
-    height: 200px;
-    font-size: 30px;
+    width: 10em;
+    height: 10em;
     border: solid red 2px;
 }

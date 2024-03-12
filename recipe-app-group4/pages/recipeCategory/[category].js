@@ -6,7 +6,7 @@ import Link from "next/link";
 import fs from 'fs';
 import path from 'path';
 import styles from '@/styles/category.module.css';
-import { Grid } from 'semantic-ui-react';
+import { Grid, GridRow, GridColumn} from 'semantic-ui-react';
 
 function RecipeCategory({ category }) {
     const router = useRouter();
@@ -21,24 +21,22 @@ function RecipeCategory({ category }) {
             <PagesHeader />
             <main>
             <h1><br />Food Category: {foodCategory}</h1>
-            <Grid relaxed columns={3}>
+            <Grid relaxed>
+                <GridRow divided centered>
                 {category.map(item => {
                     if (foodCategory === item.classification.category) {
-                        return (
-                            <Grid.Column key={item.num}>
-                                <Link href={{ pathname: '/recipePage/' + item.foodName.toString() }}>
-                                    <section className={styles.category}>
-                                        <p>{"Food: " + item.foodName}</p>
-                                    </section>
-                                    
-                                    <section>
-                                    <img src={`/./././${item.image}`} className={styles.image} alt={item.foodName} />
-                                    </section>   
-                                </Link>
-                            </Grid.Column>
+                        console.log(item.num)
+                        return (  
+                                <GridColumn key={item.num} width={3} centered>               
+                                    <Link href={{ pathname: '/recipePage/' + item.foodName.toString() }}>
+                                        <img src={`/./././${item.image}`} className={styles.image} alt={item.foodName} />
+                                            <p>{item.foodName}</p>                                                          
+                                    </Link>
+                                </GridColumn> 
                         )
                     }
                 })}
+                </GridRow>
             </Grid>
 
             </main>
