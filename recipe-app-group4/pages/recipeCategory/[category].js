@@ -1,4 +1,4 @@
-import Header from "@/Component/pagesHeader";
+import PagesHeader from "@/Component/pagesHeader";
 import Footer from "@/Component/footer";
 import { useRouter } from "next/router";
 import Head from 'next/head';
@@ -18,7 +18,8 @@ function RecipeCategory({ category }) {
                 <title>{foodCategory}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <Header />
+            <PagesHeader />
+            <main>
             <h1><br />Food Category: {foodCategory}</h1>
             <Grid relaxed columns={3}>
                 {category.map(item => {
@@ -32,19 +33,15 @@ function RecipeCategory({ category }) {
                                     
                                     <section>
                                     <img src={`/./././${item.image}`} className={styles.image} alt={item.foodName} />
-                                    </section>
-                                    
+                                    </section>   
                                 </Link>
                             </Grid.Column>
                         )
                     }
                 })}
             </Grid>
-            <Link href={{ pathname: '../' }}>
-                <section className={styles.back}>
-                    <h1>Back</h1>
-                </section>
-            </Link>
+
+            </main>
             <Footer />
         </>
     );
