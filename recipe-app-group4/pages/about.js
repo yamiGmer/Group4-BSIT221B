@@ -10,7 +10,7 @@ export default function About() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
                 <style>
-                    {`
+                {`
                         body {
                             font-family: 'Montserrat', sans-serif;
                             margin: 0;
@@ -19,12 +19,12 @@ export default function About() {
                             color: #333;
                         }
                         main {
-                            padding: 20px;
-                            max-width: 190h;
+                            padding: 5vh;
+                            max-width: 200vh;
                             margin: 0 auto;
                         }
                         section {
-                            margin-bottom: 1vh;
+                            margin-bottom: 0.1vh;
                         }
                         h1 {
                             font-size: 3em;
@@ -34,20 +34,40 @@ export default function About() {
                         }
                         p {
                             font-size: 1.3em;
-                            line-height: 2;
+                            line-height: 1.1em;
                             text-align: justify;
                         }   
 
                         .image-container {
                             float: left;
-                            margin-right: 3vh;
-                           
+                            margin-right: 4vh;
                         }
                         .image-container img {
                             max-width: 40vh;
-                            height: 57vh;
-                            
-                            border: 3px solid red; 
+                            height: 55vh;
+                            border: 0.5vh solid red; 
+                        }
+
+                        @media only screen and (max-width: 768px) {
+                            main {
+                                padding: 3vh;
+                            }
+                            h1 {
+                                font-size: 2.5em;
+                            }
+                            p {
+                                font-size: 1.1em;
+                            }
+                            .image-container {
+                                float: none;
+                                
+                                margin-bottom: 5vh;
+                                text-align: center;
+                            }
+                            .image-container img {
+                                max-width: 100%;
+                                height: auto;
+                            }
                         }
                     `}
                 </style>
@@ -78,13 +98,6 @@ Regional variations abound, with distinct culinary traditions found across the c
 The cultural significance of food is deeply ingrained in Japanese society, evident in rituals like the tea ceremony (chanoyu) and the appreciation of seasonal ingredients through festivals like hanami (cherry blossom viewing) and osechi ryori (New Year's cuisine).
 
 In recent years, Japanese cuisine has experienced a global surge in popularity, with sushi bars, ramen shops, and izakayas (casual pubs) found in cities around the world. This has led to a greater appreciation for Japanese ingredients, culinary techniques, and dining aesthetics on the international stage.
-
-
-
-
-
-
-
                         </p>
                     </div>
                 </section>
