@@ -33,16 +33,18 @@ function RecipeCategory({ category }) {
                             console.log(item.num)
                             return (  
                                 <GridColumn key={item.num} width={3} textAlign="center" verticalAlign='middle'>
-                                    <Segment>             
-                                        <Link 
+                                    <Link 
                                             href={{ pathname: '/recipePage/' + item.foodName.toString() }}
                                         >
-                                            <Image src={`/./././${item.image}`} alt={item.foodName} size='small' fluid centered/>                                                        
-                                        </Link>
+                                    <Segment key='image-link-container'>             
+                                            <Image src={`/./././${item.image}`} alt={item.foodName} size='medium' fluid centered/>                                                        
+                                        
                                     </Segment>
-                                    <Segment>
+                                    <Segment key='name-container'>
                                         <p>{item.foodName}</p>  
+                                        
                                     </Segment>
+                                    </Link>
                                 </GridColumn> 
                             )
                         }
