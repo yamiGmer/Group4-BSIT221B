@@ -7,7 +7,7 @@ import path from 'path';
 
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css'
-import { GridRow, GridColumn, Grid, Image } from 'semantic-ui-react'
+import { GridRow, GridColumn, Grid, Image, Header, Segment} from 'semantic-ui-react'
 
 
 
@@ -24,30 +24,47 @@ export default function Home({recipe}) {
         <PagesHeader/> 
           
           <main>
+          <Grid>
+            <GridRow key='title-row' textAlign="center" columns={1}>
+              <GridColumn key='title-column'>
+                <Header as='h1'>Taste of Japan</Header>
+              </GridColumn>
+            </GridRow>   
+            <GridRow columns={2} relaxed stackable textAlign="center">
+              <GridColumn key='left-column' width={12} textAlign="left">
+                <Segment>
+                  <Header as='h2'>Recommended by Web Creators</Header>
 
-          <section>
 
-              <br/>
-              <h1>Test map for recipe</h1>
-              <h1>This is the Page for japanese cuisine trivia</h1>
-                  {
-            //like for i in users(x)
-            recipe.map(i => {
-              return(
-                //iterate div based on num
-                <div key={i.num}>
-                  <p>{"Id: " + i.recipeId}</p>
-                  <p>{"Name: " + i.foodName}</p>
-                  <Link href={{pathname: '/recipePage/'+ i.foodName.toString()}}>
-                        RECIPE {i.recipeId}
-                    </Link>  
-                  <br></br>
-                </div>
-              )
-            })
-          }
+
+                </Segment>
+              </GridColumn>
+
+              <GridColumn key='right-column' width={3} textAlign="left">
+              <Segment>
+                <Header as='h2'>Recently Added</Header>
+                {
+
+                  recipe.slice(0).reverse().map(i => {
+                    return(
+                      <div key={i.num}>  
+                        <Link href={{pathname: '/recipePage/'+ i.foodName.toString()}}>
+                          <p>{i.recipeId + ". " + i.foodName}</p>
+                        </Link>  
+                        <br></br>
+                      </div>
+                    )
+                  })
+                }
+              </Segment>
+              </GridColumn>  
+            </GridRow>   
+          </Grid>
+
+    
+                  
          
-          </section>
+          
          
           
 
