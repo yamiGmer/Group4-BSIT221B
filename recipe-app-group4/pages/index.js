@@ -23,19 +23,19 @@ export default function Home({recipe}) {
         <PagesHeader/> 
           
           <main>
-          <Grid>
+          <Grid stackable>
             <GridRow key='title-row' textAlign="center" columns={1}>
               <GridColumn key='title-column'>
                 <Header as='h1'>Search Bar</Header>
               </GridColumn>
             </GridRow>   
-            <GridRow columns={2} relaxed stackable textAlign="center">
-              <GridColumn key='left-column' width={12} textAlign="left">
+            <GridRow columns={3} relaxed stackable textAlign="center">
+              <GridColumn key='left-column' width={6} textAlign="left">
                 <Segment>
-                  <Header as='h2'>Recommended by Web Creators</Header>
+                  <Header as='h2'>Recommended Pairings</Header>
                   {
                   recipe.map(i => {
-                    if(i.recipeId == 4 || i.recipeId == 7){
+                    if(i.recipeId == 4 || i.recipeId == 1){
                       return(
                         
                         <Card key={i.num} textAlign='left' className={styles.card}>
@@ -57,7 +57,33 @@ export default function Home({recipe}) {
                   
                 </Segment>
               </GridColumn>
-
+              <GridColumn key='left-column' width={6} textAlign="left">
+                <Segment>
+                  <Header as='h2'>Recommended by Web Creators</Header>
+                  {
+                  recipe.map(i => {
+                    if(i.recipeId == 5 || i.recipeId == 7){
+                      return(
+                        
+                        <Card key={i.num} textAlign='left' className={styles.card}>
+                        <Image src={`/./././${i.image}`} wrapped ui={false} fluid/>
+                        <CardContent>
+                          <CardHeader>{i.foodName}</CardHeader>
+                          <CardMeta>
+                            <span className='foodId'>Food No. {i.recipeId}</span>
+                          </CardMeta>
+                          <CardDescription>
+                            {i.description}
+                          </CardDescription>
+                        </CardContent>
+                      </Card>
+                      
+                      )
+                    }})
+                    }
+                  
+                </Segment>
+              </GridColumn>
               <GridColumn key='right-column' width={3} textAlign="left">
               <Segment>
                 <Header as='h2'>Recently Added</Header>
